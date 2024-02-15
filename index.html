@@ -17,20 +17,33 @@
     <main class="">
 
         <!-- HOME Screen -->
-        <section class="home flex flex-col items-center min-h-screen justify-center hidden">
+        <section id="home-screen" class=" home flex flex-col items-center min-h-screen justify-center ">
 
             <h2 class="text-white text-[120px] font-extrabold text-center" >ALPHABET CLASH</h2>
             <h5 class="text-white text-[23px] font-bold text-center">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</h5>
-            <button class="flex  text-center bg-white hover:text-white rounded-xl text-black text-[20px] font-bold mt-12 btn-accent btn" >Play Now</button>
+            <button onclick="play()" class="flex  text-center bg-white hover:text-white rounded-xl text-black text-[20px] font-bold mt-12 btn-accent btn" >Play Now</button>
         </section>
 
         <!-- Play Ground Start -->
-        <section class="play_ground">
-            <div>
+        <section id="playGround" class=" play_ground hidden">
+            <div class="flex flex-col items-center gap-20 pt-20">
+
                 <!-- Screen -->
-                <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">1024×320</div>
+                <div class="">
+                    <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
+                        <div class="flex justify-center">
+                            <p class="bg-[#2F2941] px-8 pb-4 rounded-b-xl text-white">Don't watch keyboard while playing...</p>
+                        
+                        </div>
 
+                        <div class="flex justify-center items-center h-full">
+                            <p class="text-9xl text-black font-bold">Y</p>
 
+                        </div>
+                    </div>
+                </div>
+
+               
                 <!-- Keyboard Start-->
                 <!-- kEYBOARD FROM kbd daisyUI -->
                 <div>
@@ -71,17 +84,52 @@
                 <!-- Keyboard End-->
 
                 <!-- Life Score -->
+
+                <div class="flex justify-between w-[1000px] ">
+                    <div>
+                        <button class="btn bg-purple-500 border-none rounded-full px-4">
+                            Life
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <button class="btn bg-blue-500 border-none rounded-full px-4">
+                        Score
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </section>
-
         <!-- Play Ground End -->
-        <section class="score">
 
+        <!-- Final Score Start -->
+        <section class="score flex flex-col items-center gap-4 min-h-screen justify-center hidden">
+            <div class=" bg-[#FFFFFF28] text-center p-10 rounded-2xl  space-y-6">
+
+                <p class="text-8xl text-white "><span class="text-extrabold">Score:</span> <span>14</span></p>
+
+                <button class="btn btn-secondary bg-white text-black border-0 hover:text-white">Play Again</button>
+
+                <p class="text-white">Practice will make pro</p>
+
+            </div>
         </section>
+        <!-- Final Score End -->
 
     </main>
     <footer>
 
     </footer>
+
+    <script src="JS/Utility.js"></script>
+    <script src="JS/Script.js"></script>
+
+
 </body>
 </html>
