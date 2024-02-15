@@ -19,9 +19,24 @@
 // }
 
 
+
+function continuePlay() {
+
+    // Generate a random alphabet
+    const alphabet = getReandomAlphabet();
+    // console.log(alphabet)
+
+
+    // set a randomly generate alphabet to the screen
+    const currentAlphabetElement = document.getElementById('currentAlphabet');
+    currentAlphabetElement.innerText = alphabet;
+    
+}
+
 // For use Functions
 
 function play() {
     hideScreen('home-screen');
     showScreen('playGround');
+    continuePlay();
 }
