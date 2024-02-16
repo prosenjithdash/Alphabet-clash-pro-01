@@ -26,10 +26,12 @@ function continuePlay() {
     const alphabet = getReandomAlphabet();
     // console.log(alphabet)
 
-
     // set a randomly generate alphabet to the screen
     const currentAlphabetElement = document.getElementById('currentAlphabet');
     currentAlphabetElement.innerText = alphabet;
+
+    //setBackground Color
+    getBackGroundColor(alphabet);
     
 }
 

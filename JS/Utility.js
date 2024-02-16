@@ -7,13 +7,20 @@ function hideScreen(elementId) {
 }
 
 
-
 // Show the Play Ground with function
 
 function showScreen(elementId) {
     const show = document.getElementById(elementId);
     show.classList.remove('hidden');
 }
+
+
+// Add background color
+function getBackGroundColor(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.add('bg-orange-400');
+}
+
 
 // Get or create an Random Alphabet array
 
@@ -31,9 +38,9 @@ function showScreen(elementId) {
     
     
     const alphabet = alphabets[index];
-        console.log(index, alphabet);
+    console.log(index, alphabet);
         
-        return alphabet;
+    return alphabet;
 
 }
 
