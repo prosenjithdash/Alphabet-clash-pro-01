@@ -34,6 +34,11 @@ function handleKeybroadPress(event) {
     // Checked matched or not
     if (playerPrassed === expectedAlphabet) {
         console.log('You get a point');
+        // remove expectedAlphabet background color
+        removeBackGroundColorById(expectedAlphabet);
+        //Continue play
+        continuePlay();
+        
     }
     else {
         console.log('You missed point and lost a life so try again.')
@@ -55,7 +60,7 @@ function continuePlay() {
     // console.log('Your random element',currentAlphabetElement)
 
     //setBackground Color
-    getBackGroundColor(alphabet);
+    addBackGroundColor(alphabet);
     
 }
 
