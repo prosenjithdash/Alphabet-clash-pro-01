@@ -16,7 +16,7 @@ function showScreen(elementId) {
 
 
 // Add background color
-function addBackGroundColor(elementId) {
+function addBackGroundColorById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add('bg-orange-400');
 }

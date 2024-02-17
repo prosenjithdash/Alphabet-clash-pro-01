@@ -34,6 +34,24 @@ function handleKeybroadPress(event) {
     // Checked matched or not
     if (playerPrassed === expectedAlphabet) {
         console.log('You get a point');
+
+        //Score update:
+
+        // 1. get the current score:
+        const currentScoreElement = document.getElementById('currentScore');
+        const currentScoreElementText = currentScoreElement.innerText;
+        const currentScoreElementNum = parseFloat(currentScoreElementText)
+        
+
+        // 2. increase the score by 1:
+
+        const newScore = currentScoreElementNum + 1;
+
+        // 3. show the update score:
+        currentScoreElement.innerText = newScore;
+
+
+        // Start New Round
         // remove expectedAlphabet background color
         removeBackGroundColorById(expectedAlphabet);
         //Continue play
@@ -42,6 +60,22 @@ function handleKeybroadPress(event) {
     }
     else {
         console.log('You missed point and lost a life so try again.')
+
+        // Life update:
+
+        // 1. get the current life:
+        const currentLifeElement = document.getElementById('currentLife');
+        const currentLifeElementText = currentLifeElement.innerText;
+        const currentLifeElementNum = parseFloat(currentLifeElementText)
+        
+
+        // 2. increase the score by 1:
+
+        const newScore = currentLifeElementNum - 1;
+
+        // 3. show the update score:
+        currentLifeElement.innerText = newScore;
+
     }
 }
 
@@ -60,7 +94,7 @@ function continuePlay() {
     // console.log('Your random element',currentAlphabetElement)
 
     //setBackground Color
-    addBackGroundColor(alphabet);
+    addBackGroundColorById(alphabet);
     
 }
 
