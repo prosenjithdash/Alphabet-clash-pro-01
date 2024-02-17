@@ -19,6 +19,29 @@
 // }
 
 
+function handleKeybroadPress(event) {
+    const playerPrassed = event.key;
+    console.log('Player passed', playerPrassed)
+    
+    // Get the expected to press
+    const currentAlphabetElement = document.getElementById('currentAlphabet');
+    const currentAlpabhet = currentAlphabetElement.innerText;
+    const expectedAlphabet = currentAlpabhet.toLowerCase();
+    console.log('Expected press', currentAlpabhet);
+    console.log(playerPrassed, expectedAlphabet)
+    
+
+    // Checked matched or not
+    if (playerPrassed === expectedAlphabet) {
+        console.log('You get a point');
+    }
+    else {
+        console.log('You missed point and lost a life so try again.')
+    }
+}
+
+//Capture keyboard key press
+document.addEventListener('keyup', handleKeybroadPress)
 
 function continuePlay() {
 
@@ -29,6 +52,7 @@ function continuePlay() {
     // set a randomly generate alphabet to the screen
     const currentAlphabetElement = document.getElementById('currentAlphabet');
     currentAlphabetElement.innerText = alphabet;
+    // console.log('Your random element',currentAlphabetElement)
 
     //setBackground Color
     getBackGroundColor(alphabet);
